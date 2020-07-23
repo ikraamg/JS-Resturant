@@ -12,12 +12,13 @@ body {
 .nav {
   flex-direction: row;
   justify-content: space-around;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 0.548) 0%,
-    rgba(37, 134, 119, 0.644) 34%,
-    rgba(255, 0, 106, 0.589) 78%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 0.548) 0%,
+      rgba(37, 134, 119, 0.644) 34%,
+      rgba(255, 0, 106, 0.589) 78%
+    );
   height: 50px;
   border-radius: 10px;
 }
