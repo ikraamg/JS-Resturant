@@ -18,24 +18,21 @@ const cleanPage = () => {
   }
 };
 
-const renderPage = (page) => {
+const renderPage = (pageName) => {
   cleanPage();
-  const arr = page;
-  for (let i = 0; i < arr.length; i += 1) {
-    content.appendChild(arr[i]());
-  }
+  pageDict[pageName].addToNode(content);
 };
 
-function createPageButton(name) {
+const createPageButton = (name) => {
   const btn = document.createElement('button');
   btn.className = 'center navBtns';
   btn.id = name;
   btn.textContent = name.toUpperCase();
   navBar.appendChild(btn);
-  btn.addEventListener('click', () => renderPage(pageDict[name]));
-}
+  btn.addEventListener('click', () => renderPage(name));
+};
 
 const pageButtons = ['home', 'menu', 'contact'];
 pageButtons.forEach(item => createPageButton(item));
 
-renderPage(pageDict.home);
+renderPage('home');
